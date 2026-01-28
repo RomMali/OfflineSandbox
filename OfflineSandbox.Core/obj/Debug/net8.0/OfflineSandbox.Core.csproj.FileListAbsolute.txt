@@ -1,0 +1,11 @@
+/home/rom/Documents/Projects/OfflineSandbox/OfflineSandbox.Core/bin/Debug/net8.0/OfflineSandbox.Core.deps.json
+/home/rom/Documents/Projects/OfflineSandbox/OfflineSandbox.Core/bin/Debug/net8.0/OfflineSandbox.Core.dll
+/home/rom/Documents/Projects/OfflineSandbox/OfflineSandbox.Core/bin/Debug/net8.0/OfflineSandbox.Core.pdb
+/home/rom/Documents/Projects/OfflineSandbox/OfflineSandbox.Core/obj/Debug/net8.0/OfflineSandbox.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/rom/Documents/Projects/OfflineSandbox/OfflineSandbox.Core/obj/Debug/net8.0/OfflineSandbox.Core.AssemblyInfoInputs.cache
+/home/rom/Documents/Projects/OfflineSandbox/OfflineSandbox.Core/obj/Debug/net8.0/OfflineSandbox.Core.AssemblyInfo.cs
+/home/rom/Documents/Projects/OfflineSandbox/OfflineSandbox.Core/obj/Debug/net8.0/OfflineSandbox.Core.csproj.CoreCompileInputs.cache
+/home/rom/Documents/Projects/OfflineSandbox/OfflineSandbox.Core/obj/Debug/net8.0/OfflineSandbox.Core.dll
+/home/rom/Documents/Projects/OfflineSandbox/OfflineSandbox.Core/obj/Debug/net8.0/refint/OfflineSandbox.Core.dll
+/home/rom/Documents/Projects/OfflineSandbox/OfflineSandbox.Core/obj/Debug/net8.0/OfflineSandbox.Core.pdb
+/home/rom/Documents/Projects/OfflineSandbox/OfflineSandbox.Core/obj/Debug/net8.0/ref/OfflineSandbox.Core.dll
