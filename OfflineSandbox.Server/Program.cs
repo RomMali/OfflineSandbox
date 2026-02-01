@@ -57,12 +57,13 @@ class Program
                     }
 
                     NetworkPacket response = new NetworkPacket();
+                    string storagePath = "";
                     
                     switch (packet.Command)
                     {
                         case CommandType.ListFiles:
                             Console.WriteLine("[Server] Received Request: ListFiles");
-                            string storagePath = Path.Combine(AppContext.BaseDirectory, "../../../Storage/Master");
+                            storagePath = Path.Combine(AppContext.BaseDirectory, "../../../Storage/Master");
                             
                             if (!Directory.Exists(storagePath)) Directory.CreateDirectory(storagePath);
                             
@@ -76,7 +77,7 @@ class Program
                             Console.WriteLine($"[Server] Request to download: {packet.Payload}");
                         
                             string fileName = Path.GetFileName(packet.Payload); 
-                            string storagePath = Path.Combine(AppContext.BaseDirectory, "../../../Storage/Master");
+                            storagePath = Path.Combine(AppContext.BaseDirectory, "../../../Storage/Master");
                             string fullPath = Path.Combine(storagePath, fileName);
 
                             response.Command = CommandType.DownloadFile;
@@ -92,7 +93,6 @@ class Program
 
                             else
                             {
-                                // File not found error
                                 response.Command = CommandType.Error;
                                 response.Payload = "File not found.";
                                 Console.WriteLine($"[Server] File not found: {fileName}");
