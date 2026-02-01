@@ -4,5 +4,7 @@ namespace OfflineSandbox.Core;
 public enum CommandType : byte
 {
     Handshake = 0x01,
+    ListFiles = 0x02,
+    DownloadFile = 0x03,
     Error = 0xFF
 }

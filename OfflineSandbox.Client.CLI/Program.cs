@@ -6,26 +6,22 @@ Console.WriteLine("[Client] Connecting to The Vault...");
 
 try 
 {
-    // 1. Connect to Localhost (The Server on this machine)
     using var client = new TcpClient();
     await client.ConnectAsync("127.0.0.1", 5000);
     Console.WriteLine("[Client] Connected!");
 
     using var stream = client.GetStream();
 
-    // 2. Prepare the Handshake
     var packet = new NetworkPacket 
     { 
-        Command = CommandType.Handshake, 
-        Payload = "Hello from Client!" 
+        Command = CommandType.ListFiles, 
+        Payload = "" 
     };
     var data = packet.ToBytes();
 
-    // 3. Send It
     await stream.WriteAsync(data, 0, data.Length);
-    Console.WriteLine("[Client] Sent Handshake. Waiting for reply...");
+    Console.WriteLine("[Client] Sent Request: ListFiles");
 
-    // 4. Wait for Reply
     byte[] buffer = new byte[4096];
     int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
     
@@ -38,6 +34,5 @@ try
 }
 catch (Exception ex)
 {
-    Console.WriteLine($"[Error] Connection failed: {ex.Message}");
-    Console.WriteLine("Did you forget to start the Server in a separate terminal?");
+    Console.WriteLine($"[Error] {ex.Message}");
 }
