@@ -6,5 +6,6 @@ public enum CommandType : byte
     Handshake = 0x01,
     ListFiles = 0x02,
     DownloadFile = 0x03,
+    UploadFile = 0x04,
     Error = 0xFF
 }
